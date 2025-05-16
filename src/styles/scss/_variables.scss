@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bellefair&display=swap');
+
+// FONT 
+$font-bellefair: 'Bellefair', sans-serif;
+$font-barlow: 'Barlow', sans-serif;
+$font-barCon: 'Barlow Condensed', sans-serif;
+
+// MOBILE
+$mp-1: 80px;
+$mp-2: 56px;
+$mp-3: 24px;
+$mp-4: 18px;
+$mp-6: 16px;
+$mp-8: 14px;
+
+// TABLET
+$tp-2: 80x;
+$tp-3: 40px;
+$tp-4: 24px;
+$tp-5: 20px;
+$tp-6: 28px;
+
+// DESKTOP
+$dp-1: 144px;
+$dp-2: 100px;
+$dp-3: 56px;
+$dp-4: 32px;
+$dp-6: 28px;
+
+// COLORS
+$white: #ffffff;
+$blue: #0b0d17;
+$light-blue: #d0d6f9;
+
+// EXTEND
+%dp-5 {
+    font-size: $dp-6;
+    letter-spacing: 4px;
+}
+
+%dp-7 {
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+%dp-8 {
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+%mp-9 {
+    font-size: 15px;
+    line-height: 180%;
+}
+
+%tp-9 {
+    font-size: 16px;
+    line-height: 180%;
+}
+
+%dp-9 {
+    font-size: 18px;
+    line-height: 180%;
+}
+
+/*
+spacing 
+1600 - 128px
+1200 - 96px
+1000 - 80px
+800 - 64px
+600 - 48px
+500 - 40px
+400 - 32px
+300 - 24px
+200 - 16px
+150 - 12px
+100 - 8px
+50 - 4px
+25 - 2px
+*/
