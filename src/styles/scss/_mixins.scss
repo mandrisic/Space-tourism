@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use './variables' as *;
+
+@mixin responsive($size) {
+    $query: map.get($breakpoints, $size);
+  
+      @media #{$query} {
+        @content;
+    }
+  }

@@ -32,6 +32,17 @@ $white: #ffffff;
 $blue: #0b0d17;
 $light-blue: #d0d6f9;
 
+// BREAKPOINTS
+$tablet: 768px;
+$laptop: 1024px;
+$desktop: 1440px;
+
+$breakpoints: (
+  "medium": "only screen and (min-width: #{$tablet})",
+  "large": "only screen and (min-width: #{$laptop})",
+  "xl": "only screen and (min-width: #{$desktop})"
+); 
+
 // EXTEND
 %dp-5 {
     font-size: $dp-6;
