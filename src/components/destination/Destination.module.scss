@@ -1,0 +1,155 @@
+@use '../../styles/scss/variables' as *;
+@use '../../styles/scss/mixins' as *;
+
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+}
+
+.destinationContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    height: 100vh;
+    width: 100%;
+    font-family: $font-barlow;
+    padding: 24px;
+    color: $white;
+    opacity: 0;
+            animation: fadeIn 0.4s ease-in forwards;
+
+    .title {
+        font-family: $font-barCon;
+        text-transform: uppercase;
+        font-size: $mp-6;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+
+        span {
+            font-weight: 700;
+            opacity: 25%;
+            padding-right: 24px;;
+        }
+    }
+
+    .imageContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 24px;
+        
+
+        .destinationImage {
+            width: 150px;
+            height: 150px;
+
+        }
+    }
+
+    .textContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        gap: 16px;
+        .navContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 24px;
+            .list {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                gap: 32px;
+                width: 100%;
+                li {
+                    position: relative;
+                    font-family: $font-barCon;
+                    text-transform: uppercase;
+                    font-size: $mp-6;
+                    font-weight: 400;
+                    letter-spacing: 1.5px;
+                    color: $light-blue;
+                    cursor: pointer;
+
+                    &.active::after {
+                        color: $white;
+                        content: '';
+                        position: absolute;
+                        bottom: -8px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        width: 100%;
+                        height: 2px;
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+
+        .heading {
+            font-family: $font-bellefair;
+            font-size: $mp-2;
+            line-height: 100%;
+            text-transform: uppercase;
+            font-weight: 400;
+            text-align: center;
+
+        }
+
+        .description {
+            @extend %mp-9;
+            text-align: center;
+            color: $light-blue;
+        }
+
+        .line {
+            background-color: $white;
+            width: 100%;
+            height: 1px;
+            opacity: 25%;
+            margin: 12px auto;
+        }
+
+        .distanceContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            gap: 24px;
+
+            .distance, .travelTime {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+            }
+
+            .distance p, .travelTime p {
+                text-transform: uppercase;
+                color: $light-blue;
+                @extend %dp-7;
+                line-height: 100%;
+                font-family: $font-barCon;
+            }
+
+            .distance h3, .travelTime h3 {
+                font-family: $font-bellefair;
+                font-size: $dp-6;
+                text-transform: uppercase;
+                line-height: 100%;
+                font-weight: 400;
+            }
+        }
+    }
+}

@@ -1,9 +1,75 @@
 @forward 'mixins';
 @forward 'variables';
 
+@use '../../styles/scss/variables' as *;
+@use '../../styles/scss/mixins' as *;
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    font-family: $font-barlow;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+    overflow-x: hidden;
+
+    &.home-bg {
+        background-image: url('../../public/assets/home/background-home-mobile.jpg');
+
+        @include responsive('medium') {
+            background-image: url('../../assets/home/background-home-tablet.jpg');
+        }
+    
+        @include responsive('large') {
+            background-image: url('../../public/assets/home/background-home-desktop.jpg');
+        }
+    }
+
+    &.destination-bg {
+        background-image: url('../../assets/destination/background-destination-mobile.jpg');
+    
+        @include responsive('medium') {
+            background-image: url('../../public/assets/destination/background-destination-tablet.jpg');
+        }
+    
+        @include responsive('large') {
+            background-image: url('../../assets/destination/background-destination-desktop.jpg');
+        }
+    }
+
+    &.crew-bg {
+        background-image: url('../../public/assets/crew/background-crew-mobile.jpg');
+
+        @include responsive('medium') {
+            background-image: url('../../public/assets/crew/background-crew-tablet.jpg');
+        }
+    
+        @include responsive('large') {
+            background-image: url('../../public/assets/crew/background-crew-desktop.jpg');
+        }
+    }
+
+    &.technology-bg {
+        background-image: url('../../public/assets/technology/background-technology-mobile.jpg');
+
+        @include responsive('medium') {
+            background-image: url('../../public/assets/technology/background-technology-tablet.jpg');
+        }
+    
+        @include responsive('large') {
+            background-image: url('../../assets/technology/background-technology-desktop.jpg');
+        }
+    }
+
+}
