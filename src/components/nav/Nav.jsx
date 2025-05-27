@@ -17,10 +17,10 @@ export const Nav = () => {
               <div className={`${styles.listContainer} ${hamb ? styles.open : ''}`}>
                   <svg className={styles.close} onClick={handleHamb} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 21"><g fill="#D0D6F9" fillRule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z" /><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z" /></g></svg>
                   <ul className={styles.list}>
-                      <li><NavLink to="/" className={({ isActive }) => isActive ? 'active' : ''} onClick={handleHamb}><span>00</span> Home</NavLink></li>
-                      <li><NavLink to="/destination" className={({ isActive }) => isActive ? 'active' : ''} onClick={handleHamb}><span>01</span> Destination</NavLink></li>
-                      <li><NavLink to="/crew" className={({ isActive }) => isActive ? 'active' : ''} onClick={handleHamb}><span>02</span> Crew</NavLink></li>
-                      <li><NavLink to="/technology" className={({ isActive }) => isActive ? 'active' : ''} onClick={handleHamb}><span>03</span> Technology</NavLink></li>
+                      <li><NavLink to="/" className={({ isActive }) => isActive ? `${styles.listItem} ${styles.active}` : styles.listItem} onClick={handleHamb}><span>00</span> Home</NavLink></li>
+                      <li><NavLink to="/destination" className={({ isActive }) => isActive ? `${styles.listItem} ${styles.active}` : styles.listItem} onClick={handleHamb}><span>01</span> Destination</NavLink></li>
+                      <li><NavLink to="/crew" className={({ isActive }) => isActive ? `${styles.listItem} ${styles.active}` : styles.listItem} onClick={handleHamb}><span>02</span> Crew</NavLink></li>
+                      <li><NavLink to="/technology" className={({ isActive }) => isActive ? `${styles.listItem} ${styles.active}` : styles.listItem} onClick={handleHamb}><span>03</span> Technology</NavLink></li>
                   </ul>
               </div>
           </nav>

@@ -140,9 +140,10 @@
                     word-spacing: 12px;
                 }
     
-                a {
+                .listItem {
                     color: #fff;
                     text-decoration: none;
+                    position: relative;
                     &::after {
                         content: '';
                         position: absolute;
@@ -161,11 +162,6 @@
                         }
                     }
 
-                    &:focus::after {
-                        background-color: $white;
-                        opacity: 1;
-                    }
-
                     &:hover::after {
                         background-color: $light-blue;
                         opacity: 1;
@@ -174,6 +170,11 @@
                     span {
                         font-weight: bold;
                     }
+                }
+
+                .active::after {
+                    background-color: $white;
+                    opacity: 1;
                 }
             }
         }
