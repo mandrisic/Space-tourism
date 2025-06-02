@@ -19,14 +19,13 @@ export const Crew = () => {
             <p className={styles.role}>{crew.role}</p>
             <h1 className={styles.heading}>{crew.name}</h1>
             <p className={styles.description}>{crew.bio}</p>
-          </section>  
-
-          <div className={styles.dots}>
+            <div className={styles.dots}>
                 <div onClick={() => handleClick(0)} className={activeIndex === 0 ? `${styles.dot} ${styles.activeDot}` : styles.dot}></div>
                 <div onClick={() => handleClick(1)} className={activeIndex === 1 ? `${styles.dot} ${styles.activeDot}` : styles.dot}></div>
                 <div onClick={() => handleClick(2)} className={activeIndex === 2 ? `${styles.dot} ${styles.activeDot}` : styles.dot}></div>
                 <div onClick={() => handleClick(3)} className={activeIndex === 3 ? `${styles.dot} ${styles.activeDot}` : styles.dot}></div>
             </div>
+          </section>  
 
               <section className={styles.imageContainer}>
               <img 
