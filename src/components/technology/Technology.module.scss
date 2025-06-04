@@ -1,0 +1,231 @@
+@use '../../styles/scss/variables' as *;
+@use '../../styles/scss/mixins' as *;
+
+
+@keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+}
+
+.techContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 32px;
+    height: 100%;
+    width: 100%;
+    font-family: $font-barlow;
+    color: $white;
+    opacity: 0;
+    animation: fadeIn 0.4s ease-in forwards;
+    @include responsive('medium') {
+        padding: 40px 0;
+        gap: 32px;
+    }
+
+    @include responsive('large') {
+        padding: 48px 0 48px 165px;
+    }
+
+    .title {
+        font-family: $font-barCon;
+        text-transform: uppercase;
+        font-size: $mp-6;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        margin-bottom: 24px;
+        @include responsive('medium') {
+            font-size: $tp-5;
+            align-self: flex-start;
+            padding-left: 40px;
+        }
+        @include responsive('large') {
+            font-size: $dp-6;
+            letter-spacing: 4px;
+            padding: 0;
+        }
+
+        span {
+            font-weight: 700;
+            opacity: 25%;
+            padding-right: 24px;;
+        }
+    }
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    @include responsive('large') {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: 32px;
+    }
+}
+
+
+.textContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 24px 24px 40px 24px;
+    gap: 40px;    
+
+    @include responsive('medium') {
+        padding-top: 32px;
+        max-width: 560px;
+    }
+    @include responsive('large') {
+        width: 635px;
+        flex-direction: row;
+        max-width: unset; 
+        align-items: flex-start;
+        justify-content: center;
+        gap: 48px;
+        padding: 0;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+
+        gap: 16px;
+        @include responsive('medium') {
+            gap: 16px;
+        }
+        @include responsive('large') {
+            gap: 24px;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    .subheading {
+        font-family: $font-bellefair;
+        font-size: $mp-4;
+        line-height: 100%;
+        text-transform: uppercase;
+        font-weight: 400;
+        text-align: center;
+        opacity: .5;
+        @include responsive('medium') {
+            font-size: $tp-4;
+        }
+        @include responsive('large') {
+            font-size: $dp-4;
+        }
+    }
+
+    .heading {
+        font-family: $font-bellefair;
+        font-size: $mp-3;
+        line-height: 100%;
+        text-transform: uppercase;
+        font-weight: 400;
+        text-align: center;
+        @include responsive('medium') {
+            font-size: $tp-3;
+        }
+        @include responsive('large') {
+            font-size: $dp-3;
+            text-align: left;
+        }
+    }
+
+    .description {
+        @extend %mp-9;
+        text-align: center;
+        color: $light-blue;
+        @include responsive('medium') {
+            font-size: $mp-6;
+            line-height: 180%;
+            margin-top: 8px;
+        }
+        @include responsive('large') {
+            text-align: left;
+            font-size: $mp-4;     
+            width: 491px;       
+        }
+    }
+}
+
+.dots {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-start;
+    gap: 16px;
+    @include responsive('large') {
+        flex-direction: column;
+        gap: 32px;
+        width: fit-content;
+    }
+    
+
+    .dot {
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        font-size: $mp-4;
+        font-family: $font-bellefair;
+        font-weight: 400;
+        color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s ease-in-out;
+        @include responsive('medium') {
+            width: 56px;
+            height: 56px;
+            font-size: $tp-4;
+        }
+        @include responsive('large') {
+            width: 80px;
+            height: 80px;
+        }
+
+        &:hover {
+            opacity: 1;
+            background-color: white;
+            color: $blue;
+        }
+    }
+
+    .activeDot {
+        opacity: 1;
+        background-color: white;
+        color: $blue;
+        transition: all .3s ease-in-out;
+    }
+}
+
+.imageContainer {
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 258px;
+    @include responsive('medium'){
+        height: 356px;
+    }
+    @include responsive('large'){
+        height: 600px;
+        width: 608px;
+    }
+    
+}
