@@ -1,7 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom'
 import styles from './Home.module.scss'
 
 export const Home = () => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/destination');
+    }
   return (
     <div className={styles.wrapper}>
         <div className={styles.mainContent}>
@@ -14,7 +20,7 @@ export const Home = () => {
                     and relax because we’ll give you a truly out of this world experience!
                 </p>
             </section>
-            <section className={styles.btnContainer}>
+            <section className={styles.btnContainer} onClick={handleClick}>
                 <div className={styles.btn}><p>Explore</p></div>
             </section>
         </div>
